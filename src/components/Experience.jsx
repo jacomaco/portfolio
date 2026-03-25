@@ -1,0 +1,72 @@
+import FadeInSection from './FadeInSection';
+
+const experience = [
+  {
+    title: 'Lärare / Läxhjälp',
+    company: 'StudyBuddy, Stockholm',
+    period: '2023 – Pågående',
+    bullets: [
+      'Undervisning och coachning av elever i matematik, NO och programmering',
+      'Förklarar komplexa koncept på ett lättförståeligt sätt',
+      'Tränar pedagogisk förmåga och inspirerande kommunikation'
+    ]
+  },
+  {
+    title: 'Egenföretagare / Grundare',
+    company: 'RS Sommarjobb',
+    period: '2016',
+    bullets: [
+      'Startade och drev eget företag med inriktning på bilvård',
+      'Ansvarade för marknadsföring, bokningshantering och kundkontakt',
+      'Lärde mig vikten av eget driv, struktur och goda kundrelationer'
+    ]
+  },
+  {
+    title: 'Butikssäljare & Receptionist',
+    company: 'Båthall 2',
+    period: '2014',
+    bullets: [
+      'Direktförsäljning och kundrådgivning',
+      'Snabbt förstå kunders behov och hitta rätt lösningar'
+    ]
+  },
+  {
+    title: 'Kundservice & Support',
+    company: 'ICA & Djurönäset',
+    period: '2015',
+    bullets: [
+      'Arbetade i miljöer med högt tempo',
+      'Hanterade stressiga situationer med positiv inställning'
+    ]
+  }
+];
+
+const Experience = () => {
+  return (
+    <section id="experience" className="section">
+      <FadeInSection>
+        <div className="container">
+          <h2 className="section-title-dark">Arbetslivserfarenhet</h2>
+          <div className="experience-grid">
+            {experience.map((job, index) => (
+              <div key={index} className="experience-card">
+                <div className="experience-header">
+                  <h3 className="experience-title">{job.title}</h3>
+                  <span className="experience-company">{job.company}</span>
+                  <span className="experience-period">{job.period}</span>
+                </div>
+                <ul className="experience-bullets">
+                  {job.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </FadeInSection>
+    </section>
+  );
+};
+
+export default Experience;
