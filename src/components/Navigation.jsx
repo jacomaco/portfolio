@@ -1,8 +1,12 @@
+import { useState } from 'react';
 import { scroller } from 'react-scroll';
 
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const scrollTo = (e, section) => {
-    e.preventDefault(); // Förhindrar standardhoppet från <a>-taggen
+    e.preventDefault();
+    setIsOpen(false); // Stäng menyn vid klick
     scroller.scrollTo(section, {
       smooth: true,
       offset: -80,
@@ -10,21 +14,59 @@ const Navigation = () => {
     });
   };
 
+  const navItems = [
+    { id: 'about', label: 'Om mig' },
+    { id: 'experience', label: 'Erfarenhet' },
+    { id: 'education', label: 'Utbildning' },
+    { id: 'skills', label: 'Kunskaper' },
+    { id: 'projects', label: 'Projekt' },
+    { id: 'languages', label: 'Språk' },
+    { id: 'interests', label: 'Intressen' },
+    { id: 'contact', label: 'Kontakt' },
+  ];
+
   return (
     <nav className="navbar">
       <div className="nav-container">
         <a href="#hero" onClick={(e) => scrollTo(e, 'hero')} className="nav-logo">
           Portfolio
         </a>
+
+        {/* Desktop-meny */}
         <ul className="nav-links">
-          <li><a href="#about" onClick={(e) => scrollTo(e, 'about')}>Om mig</a></li>
-          <li><a href="#experience" onClick={(e) => scrollTo(e, 'experience')}>Erfarenhet</a></li>
-          <li><a href="#education" onClick={(e) => scrollTo(e, 'education')}>Utbildning</a></li>
-          <li><a href="#skills" onClick={(e) => scrollTo(e, 'skills')}>Kunskaper</a></li>
-          <li><a href="#projects" onClick={(e) => scrollTo(e, 'projects')}>Projekt</a></li>
-          <li><a href="#languages" onClick={(e) => scrollTo(e, 'languages')}>Språk</a></li>
-          <li><a href="#interests" onClick={(e) => scrollTo(e, 'interests')}>Intressen</a></li>
-          <li><a href="#contact" onClick={(e) => scrollTo(e, 'contact')}>Kontakt</a></li>
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <a href={`#${item.id}`} onClick={(e) => scrollTo(e, item.id)}>
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Hamburgermeny för mobil */}
+        <button 
+          className={`nav-toggle ${isOpen ? 'open' : ''}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation"
+        >
+          <svg viewBox="0 0 100 80" width="24" height="24" fill="currentColor">
+            <rect className="line-1" width="100" height="10" rx="5"></rect>
+            <rect className="line-2" y="35" width="100" height="10" rx="5"></rect>
+            <rect className="line-3" y="70" width="100" height="10" rx="5"></rect>
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobil Dropdown-meny */}
+      <div className={`nav-mobile-menu ${isOpen ? 'open' : ''}`}>
+        <ul>
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <a href={`#${item.id}`} onClick={(e) => scrollTo(e, item.id)}>
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

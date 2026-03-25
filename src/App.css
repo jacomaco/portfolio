@@ -35,6 +35,11 @@
   --transition: 0.3s ease;
 }
 
+#languages .section-title-dark,
+#interests .section-title-dark {
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -678,6 +683,7 @@ body {
   display: grid;
   gap: 1rem;
   max-width: 500px;
+  margin: 0 auto;
 }
 
 .language-card {
@@ -736,6 +742,7 @@ body {
 
 .interests-content {
   max-width: 600px;
+  margin: 0 auto;
 }
 
 .interests-list {
@@ -844,10 +851,103 @@ body {
   font-size: 0.9rem;
 }
 
+/* Hamburgermeny Knappen */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-accent-purple);
+  padding: 0.5rem;
+  z-index: 1001;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG Animering */
+.nav-toggle svg rect {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.nav-toggle.open .line-1 {
+  transform: translateY(35px) rotate(45deg);
+}
+
+.nav-toggle.open .line-2 {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-toggle.open .line-3 {
+  transform: translateY(-35px) rotate(-45deg);
+}
+
+/* Mobil Dropdown-meny (Dold som standard för desktop) */
+.nav-mobile-menu {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-mobile-menu {
+    display: block;
+    position: fixed;
+    top: 68px; 
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+    z-index: 999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-mobile-menu.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  .nav-mobile-menu ul {
+    list-style: none;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+  }
+
+  .nav-mobile-menu a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    transition: all var(--transition);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .nav-mobile-menu a:hover {
+    color: var(--color-accent-purple);
+    background: rgba(102, 126, 234, 0.1);
+  }
+
   
   .hero-title {
     font-size: 2.5rem;

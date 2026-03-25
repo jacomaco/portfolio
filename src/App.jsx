@@ -19,19 +19,19 @@ function App() {
         <Hero />
         <WaveDivider upperColor="#667eea" lowerColor="#FF6B6B" />
         <About />
-        <WaveDivider upperColor="#FF6B6B" lowerColor="#4ECDC4" />
+        <WaveDivider upperColor="#4ECDC4" lowerColor="#FF6B6B" flip={true} />
         <Experience />
         <WaveDivider upperColor="#4ECDC4" lowerColor="#A8E6CF" />
         <Education />
-        <WaveDivider upperColor="#A8E6CF" lowerColor="#ffffff" />
+        <WaveDivider upperColor="#ffffff" lowerColor="#A8E6CF" flip={true} />
         <Skills />
         <WaveDivider upperColor="#ffffff" lowerColor="#FF8A5B" />
         <Projects />
-        <WaveDivider upperColor="#FF8A5B" lowerColor="#B794F6" />
+        <WaveDivider lowerColor="#FF8A5B" upperColor="#B794F6" flip={true} />
         <Languages />
         <WaveDivider upperColor="#B794F6" lowerColor="#63B3ED" />
         <Interests />
-        <WaveDivider upperColor="#63B3ED" lowerColor="#FF8A5B" />
+        <WaveDivider lowerColor="#63B3ED" upperColor="#FF8A5B" flip={true} />
         <Contact />
       </main>
       <WaveDivider upperColor="#FF8A5B" lowerColor="#667eea" />
