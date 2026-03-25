@@ -35,10 +35,6 @@
   --transition: 0.3s ease;
 }
 
-#languages .section-title-dark,
-#interests .section-title-dark {
-  text-align: center;
-}
 
 * {
   margin: 0;
@@ -51,7 +47,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: var(--color-hero-start);
   color: white;
   line-height: 1.6;
@@ -136,6 +132,8 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-align: center;
+  letter-spacing: -0.5px;
 }
 
 .section-title-dark {
@@ -143,6 +141,7 @@ body {
   font-weight: 800;
   margin-bottom: 2rem;
   color: var(--color-text-dark);
+  text-align: center;
 }
 
 .wave-divider-container {
@@ -193,6 +192,7 @@ body {
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1;
+  letter-spacing: -1.5px; /* Snyggare för kraftigt typsnitt */
 }
 
 .hero-typing-container {
@@ -437,6 +437,10 @@ body {
   color: var(--color-text-dark);
 }
 
+#education .section-title-dark {
+  color: #333333;
+}
+
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -513,9 +517,9 @@ body {
 }
 
 #skills .section-title-dark {
-  color: var(--color-teal-start);
+  color: #333333;
   background: none;
-  -webkit-text-fill-color: var(--color-teal-start);
+  -webkit-text-fill-color: #333333;
 }
 
 .skills-grid {
@@ -541,7 +545,7 @@ body {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--color-accent-purple);
+  color: #333333;
 }
 
 .skill-tags {
@@ -831,7 +835,7 @@ body {
   padding: 2rem;
   text-align: center;
   /* Changed from 135deg to 180deg for a seamless vertical blend */
-  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  background: #667eea;
   color: white;
   font-size: 0.9rem;
 }
