@@ -6,7 +6,7 @@ const Navigation = () => {
 
   const scrollTo = (e, section) => {
     e.preventDefault();
-    setIsOpen(false); // Stäng menyn vid klick
+    setIsOpen(false);
     scroller.scrollTo(section, {
       smooth: true,
       offset: -80,
@@ -44,7 +44,7 @@ const Navigation = () => {
         </ul>
 
         {/* Hamburgermeny för mobil */}
-        <button 
+        <button
           className={`nav-toggle ${isOpen ? 'open' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation"

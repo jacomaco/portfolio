@@ -5,12 +5,10 @@ const FadeInSection = ({ children }) => {
   const domRef = useRef();
 
   useEffect(() => {
-    // Skapa en observer som triggas när 15% av elementet syns på skärmen
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setVisible(true);
-          // Sluta observera när den väl har blivit synlig (så den inte animeras om och om igen)
           observer.unobserve(domRef.current);
         }
       });
