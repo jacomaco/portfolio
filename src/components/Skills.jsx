@@ -6,7 +6,7 @@ const skills = {
   backend: ['Node.js', 'Express', 'REST APIs', 'MVC'],
   database: ['MongoDB Atlas', 'Mongoose ODM', 'Google Cloud Storage'],
   tools: ['Git/GitHub', 'Vite', 'JWT', 'Bcrypt'],
-  concepts: ['OOP', 'Deklarativ programmering', 'SPA-arkitektur', 'GDPR']
+  concepts: ['OOP', 'SOLID', 'SDLC', 'Agile', 'Deklarativ programmering', 'SPA-arkitektur', 'GDPR']
 };
 
 const Skills = () => {

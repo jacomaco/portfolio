@@ -1,9 +1,9 @@
 import FadeInSection from './FadeInSection';
 
 const languages = [
-  { language: 'Svenska', level: 'Modersmål', levelPercent: 100 },
-  { language: 'Engelska', level: 'Flytande i tal och skrift', levelPercent: 95 },
-  { language: 'Spanska', level: 'Grundläggande', levelPercent: 30 }
+  { language: 'Svenska', level: 'Modersmål' },
+  { language: 'Engelska', level: 'Flytande i tal och skrift' },
+  { language: 'Spanska', level: 'Grundläggande' }
 ];
 
 const Languages = () => {
@@ -18,12 +18,6 @@ const Languages = () => {
                 <div className="language-header">
                   <h3 className="language-name">{lang.language}</h3>
                   <span className="language-level">{lang.level}</span>
-                </div>
-                <div className="language-bar">
-                  <div
-                    className="language-progress"
-                    style={{ width: `${lang.levelPercent}%` }}
-                  ></div>
                 </div>
               </div>
             ))}

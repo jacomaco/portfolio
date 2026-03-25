@@ -49,10 +49,10 @@ const Navigation = () => {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation"
         >
-          <svg viewBox="0 0 100 80" width="24" height="24" fill="currentColor">
-            <rect className="line-1" width="100" height="10" rx="5"></rect>
-            <rect className="line-2" y="35" width="100" height="10" rx="5"></rect>
-            <rect className="line-3" y="70" width="100" height="10" rx="5"></rect>
+          <svg viewBox="0 0 100 100" width="24" height="24" fill="currentColor">
+            <rect className="line-1" y="10" width="100" height="10" rx="5"></rect>
+            <rect className="line-2" y="45" width="100" height="10" rx="5"></rect>
+            <rect className="line-3" y="80" width="100" height="10" rx="5"></rect>
           </svg>
         </button>
       </div>
