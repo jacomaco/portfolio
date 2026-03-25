@@ -62,11 +62,9 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  /* Mer transparent bakgrund och starkare blur för en snygg "frostat glas"-effekt */
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  /* Mjuk skugga istället för en hård border */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   z-index: 1000;
   padding: 1rem 2rem;
@@ -84,11 +82,9 @@ body {
 .nav-logo {
   font-size: 1.5rem;
   font-weight: 800;
-  /* Här sätter vi den solida färgen. Du kan använda en variabel eller en hex-kod som #764ba2 */
   color: var(--color-accent-purple); 
   text-decoration: none;
   cursor: pointer;
-  /* Jag lade till en mjuk övergång här ifall du vill ha en hover-effekt senare! */
   transition: color var(--transition); 
 }
 
@@ -105,13 +101,12 @@ body {
   transition: all var(--transition);
   cursor: pointer;
   padding: 0.5rem 1rem;
-  /* Rundade hörn för att matcha resten av sidan */
   border-radius: 50px; 
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
   color: var(--color-accent-purple);
-  /* Mjuk lila bakgrund när man hovrar över länken */
   background: rgba(102, 126, 234, 0.1); 
 }
 
@@ -157,7 +152,6 @@ body {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  /* Reduced from 60px to 30px for a subtle mobile wave */
   height: 30px; 
 }
 
@@ -167,7 +161,6 @@ body {
 
 @media (min-width: 768px) {
   .wave-svg {
-    /* Reduced from 150px to 70px for a smoother desktop wave */
     height: 70px; 
   }
 }
@@ -192,7 +185,7 @@ body {
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1;
-  letter-spacing: -1.5px; /* Snyggare för kraftigt typsnitt */
+  letter-spacing: -1.5px; 
 }
 
 .hero-typing-container {
@@ -200,19 +193,16 @@ body {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
   margin-bottom: 0.5rem;
-  min-height: 2.5rem; /* Förhindrar att layouten hoppar när raden är tom */
+  min-height: 2.5rem; 
   position: relative;
   z-index: 1;
 }
-
-/* Monospace-typsnitt för det inkodade ordet */
 .hero-typed-text {
   font-family: 'Fira Code', 'Courier New', Courier, monospace;
-  color: var(--color-accent-pink); /* Plockar den rosa färgen från din befintliga palett */
+  color: var(--color-accent-pink); 
   font-weight: 700;
 }
 
-/* Den blinkande markören */
 .hero-cursor {
   display: inline-block;
   font-family: 'Fira Code', 'Courier New', Courier, monospace;
@@ -227,15 +217,8 @@ body {
   50% { opacity: 0; }
 }
 
-/* CTA Gruppering */
 .hero-cta-group {
-  margin: 2.5rem auto 0;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -245,7 +228,7 @@ body {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.85);
 }
@@ -834,13 +817,10 @@ body {
 .footer {
   padding: 2rem;
   text-align: center;
-  /* Changed from 135deg to 180deg for a seamless vertical blend */
   background: #667eea;
   color: white;
   font-size: 0.9rem;
 }
-
-/* Hamburgermeny Knappen */
 .nav-toggle {
   display: none;
   background: transparent;
@@ -853,7 +833,6 @@ body {
   justify-content: center;
 }
 
-/* SVG Animering */
 .nav-toggle svg rect {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center;
@@ -873,12 +852,11 @@ body {
   transform: translateY(-35px) rotate(-45deg);
 }
 
-/* Mobil Dropdown-meny (Dold som standard för desktop) */
 .nav-mobile-menu {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-links {
     display: none;
   }
@@ -991,7 +969,6 @@ body {
   }
 }
 
-/* Startläget: Osynlig och nedflyttad 50 pixlar */
 .fade-in-section {
   opacity: 0;
   transform: translateY(50px);
@@ -1000,7 +977,6 @@ body {
   will-change: opacity, visibility, transform;
 }
 
-/* Slutläget (när den är synlig): Fullt synlig och på sin vanliga plats */
 .fade-in-section.is-visible {
   opacity: 1;
   transform: translateY(0);
