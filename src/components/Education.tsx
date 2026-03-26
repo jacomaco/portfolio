@@ -1,6 +1,13 @@
 import FadeInSection from './FadeInSection';
 
-const education = [
+interface EducationItem {
+  degree: string;
+  school: string;
+  period: string;
+  details: string;
+}
+
+const education: EducationItem[] = [
   {
     degree: 'Civilingenjör Datateknik',
     school: 'KTH (Kungliga Tekniska Högskolan)',

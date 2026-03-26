@@ -1,6 +1,18 @@
 import FadeInSection from './FadeInSection';
 
-const projects = [
+interface Project {
+  name: string;
+  description: string;
+  features: string[];
+  technologies: string[];
+  link?: string;
+}
+
+interface ProjectCardProps {
+  project: Project;
+}
+
+const projects: Project[] = [
   {
     name: 'Star Match',
     description: 'En komplett fullstack-rekryteringsplattform byggd med MERN-stacken. Plattformen erbjuder publicering av jobbannonser, hantering av kandidatansökningar och ett skräddarsytt CMS för administratörer.',
@@ -16,7 +28,7 @@ const projects = [
   }
 ];
 
-const ProjectCard = ({ project }) => (
+const ProjectCard = ({ project }: ProjectCardProps) => (
   <div className="project-card">
     <h3 className="project-title">{project.name}</h3>
     <p className="project-description">{project.description}</p>

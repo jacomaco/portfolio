@@ -1,6 +1,6 @@
 import FadeInSection from './FadeInSection';
 
-const interests = [
+const interests: string[] = [
   'Motionera och spela bordtennis',
   'Läsa böcker och se på film',
   'Resa och bredda mina kunskaper',

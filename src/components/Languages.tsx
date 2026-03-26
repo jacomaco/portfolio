@@ -1,6 +1,11 @@
 import FadeInSection from './FadeInSection';
 
-const languages = [
+interface Language {
+  language: string;
+  level: string;
+}
+
+const languages: Language[] = [
   { language: 'Svenska', level: 'Modersmål' },
   { language: 'Engelska', level: 'Flytande i tal och skrift' },
   { language: 'Spanska', level: 'Grundläggande' }

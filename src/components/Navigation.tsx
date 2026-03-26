@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import { scroller } from 'react-scroll';
 
+interface NavItem {
+  id: string;
+  label: string;
+}
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollTo = (e, section) => {
+  const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
     e.preventDefault();
     setIsOpen(false);
     scroller.scrollTo(section, {
@@ -14,7 +19,7 @@ const Navigation = () => {
     });
   };
 
-  const navItems = [
+  const navItems: NavItem[] = [
     { id: 'about', label: 'Om mig' },
     { id: 'experience', label: 'Erfarenhet' },
     { id: 'education', label: 'Utbildning' },

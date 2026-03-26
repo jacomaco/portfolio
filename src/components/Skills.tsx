@@ -1,6 +1,15 @@
 import FadeInSection from './FadeInSection';
 
-const skills = {
+interface SkillCategories {
+  languages: string[];
+  frontend: string[];
+  backend: string[];
+  database: string[];
+  tools: string[];
+  concepts: string[];
+}
+
+const skills: SkillCategories = {
   languages: ['JavaScript (ES6+)', 'Java', 'Python', 'C', 'Go'],
   frontend: ['React', 'HTML/CSS', 'Tailwind CSS', 'React Router'],
   backend: ['Node.js', 'Express', 'REST APIs', 'MVC'],

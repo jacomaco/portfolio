@@ -1,15 +1,19 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, type ReactNode } from 'react';
 
-const FadeInSection = ({ children }) => {
+interface FadeInSectionProps {
+  children: ReactNode;
+}
+
+const FadeInSection = ({ children }: FadeInSectionProps) => {
   const [isVisible, setVisible] = useState(false);
-  const domRef = useRef();
+  const domRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.unobserve(domRef.current);
+          observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.15 });

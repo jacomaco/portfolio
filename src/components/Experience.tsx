@@ -1,6 +1,13 @@
 import FadeInSection from './FadeInSection';
 
-const experience = [
+interface ExperienceItem {
+  title: string;
+  company: string;
+  period: string;
+  bullets: string[];
+}
+
+const experience: ExperienceItem[] = [
   {
     title: 'Lärare / Läxhjälp',
     company: 'StudyBuddy, Stockholm',

@@ -7,7 +7,7 @@
 
 Välkommen till mitt portfolio-projekt! Denna sida är byggd för att visa upp mina tekniska färdigheter, mina projekt och min erfarenhet som fullstack-utvecklare. Projektet har ett starkt fokus på modern UX, prestanda och en ren, modulär kodstruktur.
 
-🔗 **[Se live-demo här](https://jacomaco.github.io/portfolio/)**
+🔗 **[Se min portfolio här](https://jacomaco.github.io/portfolio/)**
 
 ---
 

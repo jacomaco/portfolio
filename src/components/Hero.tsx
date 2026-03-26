@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const words = ['Fullstack Developer', 'MERN-specialist', 'Kreativ Problemlösare'];
+const words: string[] = ['Fullstack Developer', 'MERN-specialist', 'Kreativ Problemlösare'];
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -29,7 +29,7 @@ const Hero = () => {
       }
     };
 
-    let ticker = setTimeout(() => {
+    const ticker = setTimeout(() => {
       handleType();
     }, typingSpeed);
 
