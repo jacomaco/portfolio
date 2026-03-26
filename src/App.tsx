@@ -5,8 +5,7 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import Languages from './components/Languages';
-import Interests from './components/Interests';
+import Personal from './components/Personal';
 import Contact from './components/Contact';
 import WaveDivider from './components/WaveDivider';
 import './App.css';
@@ -19,22 +18,20 @@ function App() {
         <Hero />
         <WaveDivider upperColor="#667eea" lowerColor="#FF6B6B" />
         <About />
-        <WaveDivider upperColor="#4ECDC4" lowerColor="#FF6B6B" flip={true} />
+        <WaveDivider upperColor="#f8f9ff" lowerColor="#FF6B6B" flip={true} />
         <Experience />
-        <WaveDivider upperColor="#4ECDC4" lowerColor="#A8E6CF" />
+        <WaveDivider upperColor="#f8f9ff" lowerColor="#667eea" />
         <Education />
-        <WaveDivider upperColor="#ffffff" lowerColor="#A8E6CF" flip={true} />
+        <WaveDivider upperColor="#ffffff" lowerColor="#667eea" flip={true} />
         <Skills />
-        <WaveDivider upperColor="#ffffff" lowerColor="#FF8A5B" />
+        <WaveDivider upperColor="#ffffff" lowerColor="#FF6B6B" />
         <Projects />
-        <WaveDivider lowerColor="#FF8A5B" upperColor="#B794F6" flip={true} />
-        <Languages />
-        <WaveDivider upperColor="#B794F6" lowerColor="#63B3ED" />
-        <Interests />
-        <WaveDivider lowerColor="#63B3ED" upperColor="#FF8A5B" flip={true} />
+        <WaveDivider lowerColor="#FF6B6B" upperColor="#667eea" flip={true} />
+        <Personal />
+        <WaveDivider upperColor="#667eea" lowerColor="#FF6B6B" />
         <Contact />
       </main>
-      <WaveDivider upperColor="#FF8A5B" lowerColor="#667eea" />
+      <WaveDivider upperColor="#FF6B6B" lowerColor="#667eea" />
       <footer className="footer">
         <p>© {new Date().getFullYear()} Jacob Knuts Johansson. Alla rättigheter förbehållna.</p>
       </footer>

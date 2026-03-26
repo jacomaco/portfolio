@@ -1,6 +1,7 @@
 # 🚀 Fullstack Developer Portfolio | Jacob Knuts Johansson
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-8.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployment-222222?style=for-the-badge&logo=github&logoColor=white)](https://jacomaco.github.io/portfolio/)
@@ -34,6 +35,7 @@ Jag studerar till **Civilingenjör i Datateknik på KTH** och brinner för att b
 - 📱 **Responsiv Design:** Optimerad för alla skärmstorlekar (**mobil, surfplatta, desktop**).
 - 🎨 **Modern Estetik:** Glasmorphism-effekter, mjuka gradients och genomtänkt typografi.
 - ⚡ **Hög Prestanda:** Byggd med **Vite 8** för blixtsnabb laddning.
+- 📘 **TypeScript:** Fullt migrerad till **TypeScript** för typsäkerhet och robust kod.
 - 🖱️ **Smooth Scrolling:** Sömlös navigering mellan sektioner med `react-scroll`.
 - 🎭 **Fade-in Animationer:** Dynamiska övergångar för en levande användarupplevelse.
 - ⌨️ **Typing Hero:** Interaktiv hjältesektion med personlig skrivanimation.
@@ -43,7 +45,7 @@ Jag studerar till **Civilingenjör i Datateknik på KTH** och brinner för att b
 ## 🛠 Tech Stack
 
 ### Programmeringsspråk
-- **JavaScript (ES6+)**, **Java**, **Python**, **C**, **GO**.
+- **TypeScript**, **JavaScript (ES6+)**, **Java**, **Python**, **C**, **GO**.
 
 ### Frontend
 - **React 19**, **HTML/CSS**, **Tailwind CSS**, **UI/UX-design**, **SPA-arkitektur**, **React Router**.
