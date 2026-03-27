@@ -8,7 +8,7 @@ const About = () => {
           <h2 className="section-title">Om Mig</h2>
           <div className="about-content">
             <div className="about-photo">
-              <div className="photo-placeholder">[Foto]</div>
+              <img src={`${import.meta.env.BASE_URL}placeholderImage.png`} alt="Om Mig Foto" className="about-image" />
             </div>
             <div className="about-text">
               <p>
