@@ -20,10 +20,10 @@ const interests: string[] = [
 
 const Personal = () => {
   return (
-    <section id="personal" className="section">
+    <section id="personal" className="section bg-hero">
       <FadeInSection>
         <div className="container">
-          <h2 className="section-title">Personligt</h2>
+          <h2 className="section-title title-gradient-light">Personligt</h2>
           <div className="personal-grid">
             <div className="personal-column">
               <h3 className="personal-subtitle">
@@ -36,7 +36,7 @@ const Personal = () => {
               </h3>
               <div className="personal-languages">
                 {languages.map((lang, index) => (
-                  <div key={index} className="language-card">
+                  <div key={index} className="language-card card-glass hover-slide">
                     <span className="language-name">{lang.language}</span>
                     <span className="language-level">{lang.level}</span>
                   </div>
@@ -52,7 +52,7 @@ const Personal = () => {
               </h3>
               <ul className="personal-interests">
                 {interests.map((interest, index) => (
-                  <li key={index} className="interest-item">
+                  <li key={index} className="interest-item card-glass hover-slide">
                     <span className="interest-bullet">→</span>
                     <span>{interest}</span>
                   </li>

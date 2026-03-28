@@ -62,17 +62,17 @@ const experience: ExperienceItem[] = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section bg-light">
       <FadeInSection>
         <div className="container">
-          <h2 className="section-title-dark">Arbetslivserfarenhet</h2>
+          <h2 className="section-title title-dark">Arbetslivserfarenhet</h2>
           <div className="experience-grid">
             {experience.map((job, index) => (
-              <div key={index} className="experience-card">
+              <div key={index} className="experience-card card-solid hover-lift">
                 <div className="experience-header">
                   <h3 className="experience-title">{job.title}</h3>
                   <span className="experience-company">{job.company}</span>
-                  <span className="experience-period">{job.period}</span>
+                  <span className="experience-period badge-primary">{job.period}</span>
                 </div>
                 <ul className="experience-bullets">
                   {job.bullets.map((bullet, i) => (

@@ -29,7 +29,7 @@ const projects: Project[] = [
 ];
 
 const ProjectCard = ({ project }: ProjectCardProps) => (
-  <div className="project-card">
+  <div className="project-card card-solid hover-lift">
     <h3 className="project-title">{project.name}</h3>
     <p className="project-description">{project.description}</p>
     <ul className="project-features">
@@ -39,7 +39,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
     </ul>
     <div className="project-tech">
       {project.technologies.map(tech => (
-        <span key={tech} className="tech-tag">{tech}</span>
+        <span key={tech} className="tech-tag badge-primary">{tech}</span>
       ))}
     </div>
     {project.link && (
@@ -56,10 +56,10 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
 
 const Projects = () => {
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section bg-coral">
       <FadeInSection>
         <div className="container">
-          <h2 className="section-title-dark">Projekt</h2>
+          <h2 className="section-title title-light">Projekt</h2>
           <div className="projects-grid">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} />

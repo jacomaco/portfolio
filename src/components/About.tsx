@@ -2,10 +2,10 @@ import FadeInSection from './FadeInSection';
 
 const About = () => {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section bg-coral">
       <FadeInSection>
         <div className="container">
-          <h2 className="section-title">Om Mig</h2>
+          <h2 className="section-title title-light">Om Mig</h2>
           <div className="about-content">
             <div className="about-photo">
               <img src={`${import.meta.env.BASE_URL}placeholderImage.png`} alt="Om Mig Foto" className="about-image" />

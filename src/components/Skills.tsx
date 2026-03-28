@@ -20,56 +20,56 @@ const skills: SkillCategories = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section bg-white">
       <FadeInSection>
         <div className="container">
-          <h2 className="section-title-dark">Kunskaper & Teknologier</h2>
+          <h2 className="section-title title-dark">Kunskaper & Teknologier</h2>
           <div className="skills-grid">
-            <div className="skill-category">
+            <div className="skill-category card-solid hover-lift">
               <h3>Programmeringsspråk</h3>
               <div className="skill-tags">
                 {skills.languages.map(skill => (
-                  <span key={skill} className="skill-tag">{skill}</span>
+                  <span key={skill} className="skill-tag badge-primary">{skill}</span>
                 ))}
               </div>
             </div>
-            <div className="skill-category">
+            <div className="skill-category card-solid hover-lift">
               <h3>Frontend</h3>
               <div className="skill-tags">
                 {skills.frontend.map(skill => (
-                  <span key={skill} className="skill-tag">{skill}</span>
+                  <span key={skill} className="skill-tag badge-primary">{skill}</span>
                 ))}
               </div>
             </div>
-            <div className="skill-category">
+            <div className="skill-category card-solid hover-lift">
               <h3>Backend & API</h3>
               <div className="skill-tags">
                 {skills.backend.map(skill => (
-                  <span key={skill} className="skill-tag">{skill}</span>
+                  <span key={skill} className="skill-tag badge-primary">{skill}</span>
                 ))}
               </div>
             </div>
-            <div className="skill-category">
+            <div className="skill-category card-solid hover-lift">
               <h3>Databas & Moln</h3>
               <div className="skill-tags">
                 {skills.database.map(skill => (
-                  <span key={skill} className="skill-tag">{skill}</span>
+                  <span key={skill} className="skill-tag badge-primary">{skill}</span>
                 ))}
               </div>
             </div>
-            <div className="skill-category">
+            <div className="skill-category card-solid hover-lift">
               <h3>Verktyg</h3>
               <div className="skill-tags">
                 {skills.tools.map(skill => (
-                  <span key={skill} className="skill-tag">{skill}</span>
+                  <span key={skill} className="skill-tag badge-primary">{skill}</span>
                 ))}
               </div>
             </div>
-            <div className="skill-category">
+            <div className="skill-category card-solid hover-lift">
               <h3>Koncept</h3>
               <div className="skill-tags">
                 {skills.concepts.map(skill => (
-                  <span key={skill} className="skill-tag">{skill}</span>
+                  <span key={skill} className="skill-tag badge-primary">{skill}</span>
                 ))}
               </div>
             </div>
