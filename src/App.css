@@ -151,12 +151,24 @@ body {
 .wave-svg {
   position: relative;
   display: block;
-  width: calc(100% + 1.3px);
+  width: 200%;
   height: 30px; 
+  animation: moveWave 15s ease-in-out infinite alternate;
+  transform-origin: center;
 }
 
 .wave-flip {
-  transform: scaleY(-1);
+  animation: moveWaveFlip 15s ease-in-out infinite alternate;
+}
+
+@keyframes moveWave {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes moveWaveFlip {
+  0% { transform: scaleY(-1) translateX(0); }
+  100% { transform: scaleY(-1) translateX(-50%); }
 }
 
 @media (min-width: 768px) {
