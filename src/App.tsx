@@ -31,7 +31,7 @@ function App() {
         <WaveDivider upperColor="#667eea" lowerColor="#FF6B6B" />
         <Contact />
       </main>
-      <WaveDivider upperColor="#FF6B6B" lowerColor="#667eea" />
+      <WaveDivider lowerColor="#FF6B6B" upperColor="#667eea" flip={true} />
       <footer className="footer">
         <p>© {new Date().getFullYear()} Jacob Knuts Johansson. Alla rättigheter förbehållna.</p>
       </footer>
