@@ -12,15 +12,14 @@ const About = () => {
             </div>
             <div className="about-text">
               <p>
-                Jag är en mycket positiv, flexibel, uthållig och driven person.
-                Min utbildning och mina egna kodprojekt har gett mig en stark förmåga
-                inom problemlösning och teknisk arkitektur.
+                Jag är en driven civilingenjörsstudent inom datateknik på KTH med en passion för modern webbutveckling och systemarkitektur.
+                Genom min senaste erfarenhet som fullstack-utvecklare på Starmatch har jag praktisk vana av att bygga avancerade applikationer med MERN-stacken,
+                där jag fokuserat på allt från säkerhetsarkitektur och GDPR-efterlevnad till molnbaserade lösningar.
               </p>
               <p>
-                Genom min bakgrund inom kundservice och som egenföretagare är jag lyhörd,
-                trivs i sociala sammanhang och är van vid att ta stort eget ansvar.
-                Jag har alltid ett driv att lära mig nya tekniker och trivs utmärkt
-                med att arbeta i team för att bygga bra system och starka kundupplevelser.
+                Med en bakgrund som både lärare och egenföretagare kombinerar jag teknisk problemlösning med en stark förmåga att
+                kommunicera komplexa koncept och ta ett helhetsansvar. Jag drivs av att ständigt utvecklas, lära mig nya tekniker
+                och att bidra i team som skapar innovativa lösningar med användaren i fokus.
               </p>
             </div>
           </div>
