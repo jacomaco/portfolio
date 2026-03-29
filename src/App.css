@@ -769,8 +769,8 @@ body {
 .footer {
   padding: 2rem;
   text-align: center;
-  background: #667eea;
-  color: white;
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
   font-size: 0.9rem;
 }
 .nav-toggle {
