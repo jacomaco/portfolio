@@ -56,7 +56,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
 
 const Projects = () => {
   return (
-    <section id="projects" className="section bg-coral">
+    <section id="projects" className="section bg-hero">
       <FadeInSection>
         <div className="container">
           <h2 className="section-title title-light">Projekt</h2>
