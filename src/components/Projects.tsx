@@ -18,7 +18,7 @@ const projects: Project[] = [
     description: 'En komplett fullstack-rekryteringsplattform byggd med MERN-stacken. Plattformen erbjuder publicering av jobbannonser, hantering av kandidatansökningar och ett skräddarsytt CMS för administratörer.',
     features: [
       'Responsivt gränssnitt i React och Tailwind CSS',
-      'Rollebaserad autentisering med JWT och Bcrypt (HTTPOnly-cookies)',
+      'Autentisering med JWT och Bcrypt (HTTPOnly-cookies)',
       'Säker ATS med filuppladdning till Google Cloud Storage',
       'GDPR-efterlevnad med säker radering av molndata',
       'Säkerhetsarkitektur: Rate Limiting, Helmet, robots.txt'

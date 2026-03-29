@@ -1,6 +1,8 @@
 :root {
   --color-hero-start: #667eea;
   --color-coral-start: #ff6b6b;
+  --color-bg-light: #f8f9ff;
+  --color-bg-white: #ffffff;
   --color-teal-start: #4ecdc4;
   --color-accent-purple: #764ba2;
   --color-accent-pink: #f093fb;
@@ -120,11 +122,11 @@ body {
   color: white;
 }
 .bg-light {
-  background: #f8f9ff;
+  background: var(--color-bg-light);
   color: var(--color-text-dark);
 }
 .bg-white {
-  background: white;
+  background: var(--color-bg-white);
   color: var(--color-text-dark);
 }
 

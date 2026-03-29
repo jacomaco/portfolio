@@ -20,7 +20,7 @@ const skills: SkillCategories = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="section bg-white">
+    <section id="skills" className="section bg-light">
       <FadeInSection>
         <div className="container">
           <h2 className="section-title title-dark">Kunskaper & Teknologier</h2>

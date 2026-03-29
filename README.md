@@ -14,7 +14,9 @@ Välkommen till mitt portfolio-projekt! Denna sida är byggd för att visa upp m
 
 ## 👤 Om mig
 
-Jag studerar till **Civilingenjör i Datateknik på KTH** och brinner för att bygga robusta system som löser verkliga problem. Utöver mina studier har jag erfarenhet av allt från kundservice till att driva eget företag, vilket gett mig en stark förmåga att kombinera teknisk expertis med användarnytta. Mitt mål är att skapa applikationer som inte bara fungerar tekniskt felfritt, utan också ger ett genuint mervärde för användaren.
+Jag är **Civilingenjörsstudent inom Datateknik på KTH** med intresse för modern webbutveckling och systemarkitektur. Genom min erfarenhet inom fullstack-utveckling bygger jag avancerade applikationer med **MERN-stacken** som första val, med fokus på allt från säkerhetsarkitektur och GDPR-efterlevnad till molnbaserade lösningar.
+
+Med min bakgrund som både lärare och egenföretagare kombinerar jag teknisk problemlösning med en stark förmåga att kommunicera komplexa koncept och ta ett helhetsansvar.
 
 ---
 
@@ -24,9 +26,20 @@ Jag studerar till **Civilingenjör i Datateknik på KTH** och brinner för att b
 
 - **Frontend:** Responsivt gränssnitt byggt i **React** och **Tailwind CSS**.
 - **Admin Dashboard:** Skräddarsytt CMS för hantering av jobbannonser, kandidater och meddelanden.
-- **Säkerhet:** Rollbaserad autentisering via **JWT** och **Bcrypt** med **HTTPOnly-cookies** för att skydda mot XSS-attacker.
-- **Filhantering:** Säker uppladdning av CV-dokument till **Google Cloud Storage** med inbyggd **GDPR-efterlevnad**.
-- **Infrastruktur:** Implementerat **Rate Limiting** (DDoS-skydd), **Helmet** (säkra HTTP-headers) och **SEO-optimering** via robots.txt.
+- **Säkerhet:** Rollbaserad autentisering via **JWT** och **Bcrypt** med **HTTPOnly-cookies**.
+- **Filhantering:** Säker uppladdning av CV till **Google Cloud Storage**.
+- **Efterlevnad:** Implementerad **GDPR-arkitektur** med säker radering av molndata och systemloggar.
+- **Infrastruktur:** Driftsatt med **Rate Limiting**, **Helmet** och **SEO-optimering**.
+
+---
+
+## 💼 Arbetslivserfarenhet
+
+- **Fullstack-Utvecklare** | Star Match - IT-Konsulter (2025 – 2026)
+  - Utvecklade en komplett rekryteringsplattform (ATS) med MERN-stacken.
+  - Implementerade säkerhetssystem, GDPR-efterlevnad och molnbaserad filhantering (GCS).
+- **Lärare / Läxhjälp** | StudyBuddy (2023 – 2025)
+  - Undervisning i matematik, NO och programmering. Coachning och pedagogisk kommunikation.
 
 ---
 

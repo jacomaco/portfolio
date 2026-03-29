@@ -16,22 +16,22 @@ function App() {
       <Navigation />
       <main>
         <Hero />
-        <WaveDivider upperColor="#667eea" lowerColor="#FF6B6B" />
+        <WaveDivider upperColor="var(--color-hero-start)" lowerColor="var(--color-coral-start)" />
         <About />
-        <WaveDivider upperColor="#f8f9ff" lowerColor="#FF6B6B" flip={true} />
+        <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-coral-start)" flip={true} />
         <Experience />
-        <WaveDivider upperColor="#f8f9ff" lowerColor="#667eea" />
+        <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-hero-start)" />
         <Education />
-        <WaveDivider upperColor="#ffffff" lowerColor="#667eea" flip={true} />
+        <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-hero-start)" flip={true} />
         <Skills />
-        <WaveDivider upperColor="#ffffff" lowerColor="#FF6B6B" />
+        <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-coral-start)" />
         <Projects />
-        <WaveDivider lowerColor="#FF6B6B" upperColor="#667eea" flip={true} />
+        <WaveDivider lowerColor="var(--color-coral-start)" upperColor="var(--color-hero-start)" flip={true} />
         <Personal />
-        <WaveDivider upperColor="#667eea" lowerColor="#FF6B6B" />
+        <WaveDivider upperColor="var(--color-hero-start)" lowerColor="var(--color-coral-start)" />
         <Contact />
       </main>
-      <WaveDivider lowerColor="#FF6B6B" upperColor="#667eea" flip={true} />
+      <WaveDivider lowerColor="var(--color-coral-start)" upperColor="var(--color-hero-start)" flip={true} />
       <footer className="footer">
         <p>© {new Date().getFullYear()} Jacob Knuts Johansson. Alla rättigheter förbehållna.</p>
       </footer>
