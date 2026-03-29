@@ -29,8 +29,10 @@ function App() {
         <Projects />
         <WaveDivider upperColor="var(--color-hero-start)" lowerColor="var(--color-coral-start)" />
         <Contact />
-        <WaveDivider lowerColor="var(--color-hero-start)" upperColor="var(--color-coral-start)" />
-        <WaveDivider lowerColor="var(--color-hero-start)" upperColor="var(--color-bg-light)" flip={true} />
+        <div className="footer-waves">
+          <WaveDivider lowerColor="var(--color-hero-start)" upperColor="var(--color-coral-start)" />
+          <WaveDivider lowerColor="var(--color-hero-start)" upperColor="var(--color-bg-light)" flip={true} />
+        </div>
       </main>
       <footer className="footer">
         <p>© {new Date().getFullYear()} Jacob Knuts Johansson. Alla rättigheter förbehållna.</p>

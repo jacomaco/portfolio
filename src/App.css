@@ -200,6 +200,28 @@ body {
   line-height: 0;
 }
 
+.footer-waves {
+  line-height: 0;
+  margin-top: -1px; /* Remove microscopic gap */
+}
+
+/* Give the top wave an alternate reverse direction and slower duration for chaotic liquid morphing */
+.footer-waves .wave-divider-container:first-child .wave-svg {
+  animation-duration: 22s;
+  animation-direction: alternate-reverse;
+}
+
+/* Give the bottom wave a faster duration */
+.footer-waves .wave-divider-container:last-child .wave-svg {
+  animation-duration: 16s;
+  animation-delay: -5s;
+}
+
+/* Optionally pull it tighter if the blue gap feels too tall */
+.footer-waves .wave-divider-container:last-child {
+  margin-top: -5px;
+}
+
 .wave-svg {
   position: relative;
   display: block;
@@ -233,7 +255,10 @@ body {
 
 @media (min-width: 768px) {
   .wave-svg {
-    height: 70px;
+    height: 70px; 
+  }
+  .footer-waves .wave-divider-container:last-child {
+    margin-top: -15px;
   }
 }
 
