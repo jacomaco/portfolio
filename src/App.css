@@ -100,6 +100,12 @@ body {
   padding: 6rem 2rem;
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -203,7 +209,9 @@ body {
 
 .footer-waves {
   line-height: 0;
-  margin-top: -1px; /* Remove microscopic gap */
+  margin-top: -3px;
+  background: var(--color-hero-start);
+  overflow: hidden;
 }
 
 /* Give the top wave an alternate reverse direction and slower duration for chaotic liquid morphing */
@@ -220,14 +228,14 @@ body {
 
 /* Optionally pull it tighter if the blue gap feels too tall */
 .footer-waves .wave-divider-container:last-child {
-  margin-top: -5px;
+  margin-top: -10px;
 }
 
 .wave-svg {
   position: relative;
   display: block;
   width: 200%;
-  height: 30px;
+  height: 50px;
   animation: moveWave 15s ease-in-out infinite alternate;
   transform-origin: center;
 }
@@ -794,6 +802,7 @@ body {
 }
 
 .footer {
+  margin-top: -1px; /* Overlap with wave-divider above */
   padding: 2rem;
   text-align: center;
   background: var(--color-bg-light);
