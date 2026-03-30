@@ -5,7 +5,7 @@ interface WaveDividerProps {
 }
 
 const WaveDivider = ({ upperColor, lowerColor, flip = false }: WaveDividerProps) => {
-  const wavePath = "M 0 60 Q 150 35 300 60 T 600 60 T 900 60 T 1200 60 V 0 H 0 Z";
+  const wavePath = "M 0 60 Q 150 35 300 60 T 600 60 T 900 60 T 1200 60 V -5 H 0 Z";
 
   return (
     <div
@@ -18,6 +18,7 @@ const WaveDivider = ({ upperColor, lowerColor, flip = false }: WaveDividerProps)
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1200 120"
         preserveAspectRatio="none"
+        style={{ overflow: 'visible' }}
       >
         <path d={wavePath} fill={upperColor} />
       </svg>
