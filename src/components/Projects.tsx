@@ -24,7 +24,7 @@ const projects: Project[] = [
       'Säkerhetsarkitektur: Rate Limiting, Helmet, robots.txt'
     ],
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'JWT', 'Google Cloud Storage', 'GCP'],
-    link: 'https://one43-1s7b.onrender.com/'
+    link: 'https://starmatch.se'
   }
 ];
 
