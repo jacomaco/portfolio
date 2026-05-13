@@ -9,7 +9,7 @@ interface EducationItem {
 
 const education: EducationItem[] = [
   {
-    degree: 'Civilingenjör Datateknik',
+    degree: 'Civilingenjörsstudent Datateknik',
     school: 'KTH (Kungliga Tekniska Högskolan)',
     period: 'Pågående',
     details: 'Utbildningen ger en bred grund inom datateknik, inklusive programmering, systemutveckling och teknisk arkitektur.'
