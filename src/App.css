@@ -66,12 +66,21 @@ body {
 }
 
 .nav-logo {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 800;
-  color: var(--color-accent-purple);
+  letter-spacing: 2px;
+  color: white;
   text-decoration: none;
   cursor: pointer;
-  transition: color var(--transition);
+  background: var(--color-hero-start);
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  transition: all var(--transition);
+}
+
+.nav-logo:hover {
+  background: #5a6fd6;
+  transform: scale(1.05);
 }
 
 .nav-links {
@@ -92,7 +101,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: var(--color-accent-purple);
+  color: var(--color-hero-start);
   background: rgba(102, 126, 234, 0.1);
 }
 
@@ -955,7 +964,7 @@ body {
   background: transparent;
   border: none;
   cursor: pointer;
-  color: var(--color-accent-purple);
+  color: var(--color-hero-start);
   padding: 0.5rem;
   z-index: 1001;
   align-items: center;
@@ -1041,7 +1050,7 @@ body {
   }
 
   .nav-mobile-menu a:hover {
-    color: var(--color-accent-purple);
+    color: var(--color-hero-start);
     background: rgba(102, 126, 234, 0.1);
   }
 

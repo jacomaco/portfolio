@@ -24,7 +24,7 @@ const Navigation = () => {
     { id: 'experience', label: 'Erfarenhet' },
     { id: 'education', label: 'Utbildning' },
     { id: 'skills', label: 'Kunskaper' },
-    // { id: 'projects', label: 'Projekt' },
+    { id: 'projects', label: 'Projekt' },
     { id: 'personal', label: 'Personligt' },
     { id: 'contact', label: 'Kontakt' },
   ];
@@ -33,7 +33,7 @@ const Navigation = () => {
     <nav className="navbar">
       <div className="nav-container">
         <a href="#hero" onClick={(e) => scrollTo(e, 'hero')} className="nav-logo">
-          Portfolio
+          JKJ
         </a>
 
         {/* Desktop-meny */}
