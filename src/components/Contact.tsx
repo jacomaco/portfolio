@@ -10,14 +10,14 @@ const Contact = () => {
             Jag är alltid öppen för nya möjligheter och samarbeten.
           </p>
           <div className="contact-links">
-            <a href="mailto:jacobknuts@gmail.com" className="contact-item card-glass">
+            <a href="mailto:Jacobjohansson1@protonmail.com" className="contact-item card-glass">
               <span className="contact-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg>
               </span>
-              <span>jacobknuts@gmail.com</span>
+              <span>Jacobjohansson1@protonmail.com</span>
             </a>
             <a href="https://github.com/jacomaco" target="_blank" rel="noopener noreferrer" className="contact-item card-glass">
               <span className="contact-icon">
