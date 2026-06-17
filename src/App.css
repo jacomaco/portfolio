@@ -183,7 +183,7 @@ body {
   display: inline-block;
   padding: 0.25rem 0.75rem;
   background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
-  color: var(--color-accent-purple);
+  color: var(--color-hero-start);
   border-radius: 50px;
   font-size: 0.875rem;
   font-weight: 600;
@@ -606,7 +606,7 @@ body {
   font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 0.75rem;
-  color: var(--color-accent-purple);
+  color: var(--color-hero-start);
 }
 
 .project-description {
@@ -655,7 +655,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: var(--color-accent-purple);
+  background: var(--color-hero-start);
   color: white;
   text-decoration: none;
   font-weight: 700;
@@ -665,7 +665,7 @@ body {
 
 .project-link:hover {
   transform: translateX(5px);
-  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .project-link svg {
@@ -674,6 +674,49 @@ body {
 
 .project-link:hover svg {
   transform: translate(2px, -2px);
+}
+
+/* ─── Regular Project Card (Lifebuoy effect: Red and White stripes) ─── */
+
+.project-card--regular {
+  position: relative;
+  border: none;
+  background: transparent;
+  overflow: visible;
+}
+
+/* Animated stripe border layer */
+.project-card--regular::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: calc(var(--radius) + 4px);
+  background: repeating-linear-gradient(
+    -45deg,
+    #ef4444, /* red */
+    #ef4444 10px,
+    #ffffff 10px, /* white */
+    #ffffff 20px
+  );
+  z-index: 0;
+  animation: wip-stripe-scroll 1.5s linear infinite;
+  background-size: 28.28px 28.28px;
+}
+
+/* White content background that sits on top of the stripes */
+.project-card--regular::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: white;
+  border-radius: var(--radius);
+  z-index: 1;
+}
+
+/* Ensure all card content renders above the pseudo-elements */
+.project-card--regular > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* ─── WIP (Work In Progress) Project Card ─── */
