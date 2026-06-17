@@ -316,14 +316,14 @@ body {
 }
 .hero-typed-text {
   font-family: "Fira Code", "Courier New", Courier, monospace;
-  color: var(--color-accent-pink);
+  color: #c7d2fe;
   font-weight: 700;
 }
 
 .hero-cursor {
   display: inline-block;
   font-family: "Fira Code", "Courier New", Courier, monospace;
-  color: var(--color-accent-pink);
+  color: #c7d2fe;
   font-weight: 400;
   animation: blink 1s step-end infinite;
   margin-left: 2px;

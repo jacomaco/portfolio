@@ -25,7 +25,6 @@ const Navigation = () => {
     { id: 'education', label: 'Utbildning' },
     { id: 'skills', label: 'Kunskaper' },
     { id: 'projects', label: 'Projekt' },
-    { id: 'personal', label: 'Personligt' },
     { id: 'contact', label: 'Kontakt' },
   ];
 
