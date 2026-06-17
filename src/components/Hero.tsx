@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import WaveDivider from './WaveDivider';
 
 const words: string[] = ['Fullstack Developer', 'MERN-specialist', 'Kreativ Problemlösare'];
 
@@ -65,6 +66,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <WaveDivider upperColor="transparent" lowerColor="var(--color-coral-start)" fillBottom={true} className="hero-wave" />
     </section>
   );
 };

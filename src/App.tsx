@@ -16,7 +16,6 @@ function App() {
       <Navigation />
       <main>
         <Hero />
-        <WaveDivider upperColor="var(--color-hero-start)" lowerColor="var(--color-coral-start)" />
         <About />
         <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-coral-start)" flip={true} />
         <Experience />
