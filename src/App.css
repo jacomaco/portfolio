@@ -676,6 +676,102 @@ body {
   transform: translate(2px, -2px);
 }
 
+/* ─── WIP (Work In Progress) Project Card ─── */
+
+.project-card--wip {
+  position: relative;
+  border: none;
+  background: transparent;
+  overflow: visible;
+}
+
+/* Animated stripe border layer */
+.project-card--wip::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: calc(var(--radius) + 4px);
+  background: repeating-linear-gradient(
+    -45deg,
+    #fbbf24,
+    #fbbf24 10px,
+    #1a1a2e 10px,
+    #1a1a2e 20px
+  );
+  z-index: 0;
+  animation: wip-stripe-scroll 1.5s linear infinite;
+  background-size: 28.28px 28.28px;
+}
+
+/* White content background that sits on top of the stripes */
+.project-card--wip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: white;
+  border-radius: var(--radius);
+  z-index: 1;
+}
+
+/* Ensure all card content renders above the pseudo-elements */
+.project-card--wip > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes wip-stripe-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 28.28px 0;
+  }
+}
+
+.wip-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  border-radius: 50px;
+  width: fit-content;
+  animation: wip-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes wip-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(251, 191, 36, 0);
+  }
+}
+
+.wip-banner__icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.wip-banner__text {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #1a1a2e;
+}
+
+.badge-wip {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #92400e;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
 /* ─── Personal (merged Languages + Interests) ─── */
 
 .personal-grid {

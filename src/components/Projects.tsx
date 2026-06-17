@@ -6,6 +6,7 @@ interface Project {
   features: string[];
   technologies: string[];
   link?: string;
+  wip?: boolean;
 }
 
 interface ProjectCardProps {
@@ -25,11 +26,31 @@ const projects: Project[] = [
     ],
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'JWT', 'Google Cloud Storage', 'GCP'],
     link: 'https://starmatch.se'
-  }
+  },
+  {
+    name: 'Jobbql — Auto-Apply Pipeline',
+    description: 'Ett automationsverktyg som hämtar jobbannonser från Arbetsförmedlingens API, analyserar dem mot en kandidatprofil med AI, och genererar skräddarsydda CV:n. Systemet hanterar hela flödet från datainsamling till ansökningskö med dubblettskydd.',
+    features: [
+      'Realtidshämtning av jobbannonser via JobTech Dev Stream API',
+      'AI-driven matchning och CV-generering mot användarprofil',
+      'Mongoose-modeller med dubblettskydd (unikt index: userId + jobPostId)',
+      'Asynkron generator-arkitektur för minneseffektiv bearbetning',
+      'Dockeriserad MongoDB med Mongo Express för datavisualisering',
+    ],
+    technologies: ['TypeScript', 'Bun', 'MongoDB', 'Mongoose', 'Docker', 'REST API'],
+    link: 'https://github.com/jacomaco/jobbql-autoapply',
+    wip: true,
+  },
 ];
 
 const ProjectCard = ({ project }: ProjectCardProps) => (
-  <div className="project-card card-solid hover-lift">
+  <div className={`project-card card-solid hover-lift${project.wip ? ' project-card--wip' : ''}`}>
+    {project.wip && (
+      <div className="wip-banner">
+        <span className="wip-banner__icon">🚧</span>
+        <span className="wip-banner__text">Under Utveckling</span>
+      </div>
+    )}
     <h3 className="project-title">{project.name}</h3>
     <p className="project-description">{project.description}</p>
     <ul className="project-features">
@@ -39,7 +60,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
     </ul>
     <div className="project-tech">
       {project.technologies.map(tech => (
-        <span key={tech} className="tech-tag badge-primary">{tech}</span>
+        <span key={tech} className={`tech-tag ${project.wip ? 'badge-wip' : 'badge-primary'}`}>{tech}</span>
       ))}
     </div>
     {project.link && (
@@ -72,3 +93,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
