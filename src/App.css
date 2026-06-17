@@ -397,7 +397,7 @@ body {
 
 .btn-primary {
   background: white;
-  color: var(--color-accent-purple);
+  color: var(--color-hero-start);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
