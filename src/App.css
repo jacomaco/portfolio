@@ -1072,6 +1072,13 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
+[data-theme="dark"] .contact-item:hover {
+  background: var(--color-accent-blue);
+  color: #0f172a;
+  border-color: var(--color-accent-blue);
+  box-shadow: 0 8px 25px rgba(129, 140, 248, 0.3);
+}
+
 .contact-icon {
   display: flex;
   align-items: center;
