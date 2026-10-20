@@ -43,22 +43,18 @@ const Navigation = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <a href="#hero" onClick={(e) => scrollTo(e, 'hero')} className="nav-logo">
-          JKJ
-        </a>
+        {/* Desktop-meny */}
+        <ul className="nav-links">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <a href={`#${item.id}`} onClick={(e) => scrollTo(e, item.id)}>
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
 
         <div className="nav-controls">
-          {/* Desktop-meny */}
-          <ul className="nav-links">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <a href={`#${item.id}`} onClick={(e) => scrollTo(e, item.id)}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-
           <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle dark mode">
             {theme === 'light' ? (
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

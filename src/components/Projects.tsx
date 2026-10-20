@@ -44,7 +44,7 @@ const projects: Project[] = [
 ];
 
 const ProjectCard = ({ project }: ProjectCardProps) => (
-  <div className={`project-card card-solid hover-lift ${project.wip ? 'project-card--wip' : 'project-card--regular'}`}>
+  <div className="project-card card-solid hover-lift">
     {project.wip && (
       <div className="wip-banner">
         <span className="wip-banner__icon">🚧</span>
