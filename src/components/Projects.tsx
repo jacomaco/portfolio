@@ -35,6 +35,21 @@ const projects: Project[] = [
     secondaryLink: { label: 'Gamla sidan', url: 'https://www.sicklasluss.se/' },
   },
   {
+    name: 'Kornets Hälso Spa — Webbplats',
+    role: 'Frontendutvecklare / webbutvecklare · Maj–augusti 2026 · Soloansvarig',
+    description: 'Utvecklade och driftsatte en responsiv one-page-webbplats åt Kornets Hälso Spa på Södermalm i Stockholm. Ansvarade för hela den tekniska leveransen – från komponentarkitektur och styling till CI/CD, custom domain och produktion.',
+    features: [
+      'Byggde webbplatsen i React 19, TypeScript och Vite med ett återanvändbart komponentbibliotek och egen CSS',
+      'Implementerade responsiv design med mobilanpassad meny och anpassning för desktop, tablet och mobil',
+      'Utvecklade interaktiva komponenter: omdömeskarusell med autoplay och SVG-betyg, FAQ-accordion, scrolltriggade animationer (IntersectionObserver), behandlingsmarquee och back-to-top',
+      'Genomförde prestanda- och SEO-arbete: lazy loading, bilddimensioner mot layoutskifte, fetchPriority för LCP-bild, preconnect, semantisk HTML och metadata',
+      'Integrerade Bokadirekt (bokningsflöde), ASEA (extern shop), Vimeo (inbäddad film) och Google Maps',
+      'Satte upp CI/CD med GitHub Actions som bygger och deployar till GitHub Pages vid push till main, med custom domain kornets.se bakom Cloudflare',
+    ],
+    technologies: ['React 19', 'TypeScript', 'Vite', 'CSS', 'ESLint', 'GitHub Actions', 'GitHub Pages', 'Cloudflare'],
+    link: 'https://kornets.se/',
+  },
+  {
     name: 'Star Match',
     description: 'En komplett fullstack-rekryteringsplattform byggd med MERN-stacken. Plattformen erbjuder publicering av jobbannonser, hantering av kandidatansökningar och ett skräddarsytt CMS för administratörer.',
     features: [

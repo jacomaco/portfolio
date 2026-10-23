@@ -10,11 +10,11 @@ interface SkillCategories {
 }
 
 const skills: SkillCategories = {
-  languages: ['JavaScript (ES6+)', 'Java', 'Python', 'C', 'Go'],
+  languages: ['JavaScript (ES6+)', 'TypeScript', 'Java', 'Python', 'C', 'Go'],
   frontend: ['React', 'HTML/CSS', 'Tailwind CSS', 'React Router', 'Eleventy (11ty)', 'Nunjucks', 'Markdown'],
   backend: ['Node.js', 'Express', 'REST APIs', 'MVC'],
   database: ['MongoDB Atlas', 'Mongoose ODM', 'Google Cloud Storage'],
-  tools: ['Git/GitHub', 'Vite', 'JWT', 'Bcrypt', 'GitHub Actions', 'GitHub Pages', 'Pages CMS', 'Pagefind', 'sharp'],
+  tools: ['Git/GitHub', 'Vite', 'JWT', 'Bcrypt', 'GitHub Actions', 'GitHub Pages', 'Pages CMS', 'Pagefind', 'sharp', 'Cloudflare'],
   concepts: ['OOP', 'SOLID', 'SDLC', 'Agile', 'Deklarativ programmering', 'SPA-arkitektur', 'GDPR', 'CI/CD', 'Tillgänglighet (WCAG)', 'Statisk webbgenerering']
 };
 
