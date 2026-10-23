@@ -717,6 +717,17 @@ body {
   color: var(--color-accent-blue);
 }
 
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
 .project-description {
   color: var(--color-text-muted);
   margin-bottom: 1.25rem;
@@ -758,6 +769,13 @@ body {
   font-size: 0.8rem;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .project-link {
   display: inline-flex;
   align-items: center;
@@ -782,6 +800,18 @@ body {
 
 .project-link:hover svg {
   transform: translate(2px, -2px);
+}
+
+.project-link--secondary {
+  background: transparent;
+  color: var(--color-accent-blue);
+  border: 2px solid currentColor;
+  padding: calc(0.75rem - 2px) calc(1.5rem - 2px);
+}
+
+.project-link--secondary:hover {
+  background: rgba(102, 126, 234, 0.1);
+  box-shadow: none;
 }
 
 .wip-banner {
