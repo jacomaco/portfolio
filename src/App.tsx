@@ -8,34 +8,37 @@ import Projects from './components/Projects';
 // import Personal from './components/Personal';
 import Contact from './components/Contact';
 import WaveDivider from './components/WaveDivider';
+import SmoothScroll from './components/SmoothScroll';
 import './App.css';
 
 function App() {
   return (
     <div className="app">
       <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-coral-start)" flip={true} />
-        <Experience />
-        <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-hero-start)" />
-        <Education />
-        <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-hero-start)" flip={true} />
-        <Skills />
-        <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-hero-start)" />
-        {/* <Personal /> */}
-        <Projects />
-        <WaveDivider upperColor="var(--color-hero-start)" lowerColor="var(--color-coral-start)" />
-        <Contact />
-        <div className="footer-waves">
-          <WaveDivider lowerColor="var(--color-hero-start)" upperColor="var(--color-coral-start)" />
-          <WaveDivider lowerColor="var(--color-hero-start)" upperColor="var(--color-bg-light)" flip={true} />
-        </div>
-      </main>
-      <footer className="footer">
-        <p>© {new Date().getFullYear()} Jacob Knuts Johansson. Alla rättigheter förbehållna.</p>
-      </footer>
+      <SmoothScroll>
+        <main>
+          <Hero />
+          <About />
+          <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-coral-start)" flip={true} />
+          <Experience />
+          <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-hero-start)" />
+          <Education />
+          <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-hero-start)" flip={true} />
+          <Skills />
+          <WaveDivider upperColor="var(--color-bg-light)" lowerColor="var(--color-hero-start)" />
+          {/* <Personal /> */}
+          <Projects />
+          <WaveDivider upperColor="var(--color-hero-start)" lowerColor="var(--color-coral-start)" />
+          <Contact />
+          <div className="footer-waves">
+            <WaveDivider lowerColor="var(--color-hero-start)" upperColor="var(--color-coral-start)" />
+            <WaveDivider lowerColor="var(--color-hero-start)" upperColor="var(--color-bg-light)" flip={true} />
+          </div>
+        </main>
+        <footer className="footer">
+          <p>© {new Date().getFullYear()} Jacob Knuts Johansson. Alla rättigheter förbehållna.</p>
+        </footer>
+      </SmoothScroll>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { scroller } from 'react-scroll';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollProgress from './ScrollProgress';
+import { scrollToSection } from './SmoothScroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,11 +67,7 @@ const Navigation = () => {
     e.preventDefault();
     setIsOpen(false);
     setActiveSection(section);
-    scroller.scrollTo(section, {
-      smooth: true,
-      offset: -80,
-      duration: 500
-    });
+    scrollToSection(section);
   };
 
   return (

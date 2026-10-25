@@ -64,7 +64,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -83,6 +83,15 @@ body {
 
 .app {
   min-height: 100vh;
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+}
+
+#smooth-content {
+  width: 100%;
+  overflow: visible;
 }
 
 .navbar {
@@ -348,32 +357,37 @@ body {
 
 .wave-svg {
   position: relative;
+  left: 0;
   display: block;
   width: 200%;
   height: 70px;
   animation: moveWave 15s ease-in-out infinite alternate;
   transform-origin: center;
+  /* Viktigt: animera inte transform här. En transform-animation får ett
+     eget compositor-lager, och när ScrollSmoother samtidigt flyttar
+     #smooth-content på bråkdelspixlar resamplas vågens kanter -> skimmer.
+     Genom att animera `left` ritas vågen in i samma lager som resten av
+     sidan och kanterna förblir knivskarpa. */
+  shape-rendering: geometricPrecision;
 }
 
 .wave-flip {
-  animation: moveWaveFlip 15s ease-in-out infinite alternate;
+  transform: scaleY(-1);
 }
 
 @keyframes moveWave {
-  0% {
-    transform: translateX(0);
+  from {
+    left: 0;
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    left: -100%;
   }
 }
 
-@keyframes moveWaveFlip {
-  0% {
-    transform: scaleY(-1) translateX(0);
-  }
-  100% {
-    transform: scaleY(-1) translateX(-50%);
+@media (prefers-reduced-motion: reduce) {
+  .wave-svg {
+    animation: none;
+    left: 0;
   }
 }
 
@@ -1190,11 +1204,14 @@ body {
   transition:
     opacity 0.8s ease-out,
     transform 0.8s ease-out;
-  will-change: opacity, visibility, transform;
+  will-change: opacity, transform;
 }
 
 .fade-in-section.is-visible {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
+  /* Släpp compositor-lagret när animationen är klar, annars kan
+     kanterna flimra mot vågorna som ligger mellan sektionerna. */
+  will-change: auto;
 }

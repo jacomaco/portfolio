@@ -20,9 +20,8 @@ const WaveDivider = ({ upperColor, lowerColor, flip = false, fillBottom = false,
         className={`wave-svg ${flip ? 'wave-flip' : ''}`}
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
+        viewBox="0 -5 1200 130"
         preserveAspectRatio="none"
-        style={{ overflow: 'visible' }}
       >
         <path d={wavePath} fill={fillBottom ? lowerColor : upperColor} />
       </svg>
