@@ -1,13 +1,28 @@
 import { useState, useEffect } from 'react';
 import { scroller } from 'react-scroll';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ScrollProgress from './ScrollProgress';
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface NavItem {
   id: string;
   label: string;
 }
 
+const navItems: NavItem[] = [
+  { id: 'about', label: 'Om mig' },
+  { id: 'experience', label: 'Erfarenhet' },
+  { id: 'education', label: 'Utbildning' },
+  { id: 'skills', label: 'Kunskaper' },
+  { id: 'projects', label: 'Projekt' },
+  { id: 'contact', label: 'Kontakt' },
+];
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'light';
   });
@@ -21,9 +36,37 @@ const Navigation = () => {
     setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
   };
 
+  useEffect(() => {
+    const triggers = navItems.flatMap(({ id }) => {
+      const section = document.getElementById(id);
+      if (!section) return [];
+
+      return [{
+        id,
+        trigger: ScrollTrigger.create({
+          trigger: section,
+          start: 'top 40%',
+          end: 'bottom 40%',
+          onToggle: (self) => {
+            if (self.isActive) setActiveSection(id);
+          },
+        }),
+      }];
+    });
+
+    // Sätt rätt sektion direkt vid omladdning mitt på sidan.
+    const current = triggers.find(({ trigger }) => trigger.isActive);
+    if (current) setActiveSection(current.id);
+
+    return () => {
+      triggers.forEach(({ trigger }) => trigger.kill());
+    };
+  }, []);
+
   const scrollTo = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
     e.preventDefault();
     setIsOpen(false);
+    setActiveSection(section);
     scroller.scrollTo(section, {
       smooth: true,
       offset: -80,
@@ -31,23 +74,20 @@ const Navigation = () => {
     });
   };
 
-  const navItems: NavItem[] = [
-    { id: 'about', label: 'Om mig' },
-    { id: 'experience', label: 'Erfarenhet' },
-    { id: 'education', label: 'Utbildning' },
-    { id: 'skills', label: 'Kunskaper' },
-    { id: 'projects', label: 'Projekt' },
-    { id: 'contact', label: 'Kontakt' },
-  ];
-
   return (
     <nav className="navbar">
+      <ScrollProgress />
       <div className="nav-container">
         {/* Desktop-meny */}
         <ul className="nav-links">
           {navItems.map((item) => (
             <li key={item.id}>
-              <a href={`#${item.id}`} onClick={(e) => scrollTo(e, item.id)}>
+              <a
+                href={`#${item.id}`}
+                className={activeSection === item.id ? 'active' : ''}
+                aria-current={activeSection === item.id ? 'location' : undefined}
+                onClick={(e) => scrollTo(e, item.id)}
+              >
                 {item.label}
               </a>
             </li>
@@ -95,7 +135,12 @@ const Navigation = () => {
         <ul>
           {navItems.map((item) => (
             <li key={item.id}>
-              <a href={`#${item.id}`} onClick={(e) => scrollTo(e, item.id)}>
+              <a
+                href={`#${item.id}`}
+                className={activeSection === item.id ? 'active' : ''}
+                aria-current={activeSection === item.id ? 'location' : undefined}
+                onClick={(e) => scrollTo(e, item.id)}
+              >
                 {item.label}
               </a>
             </li>
