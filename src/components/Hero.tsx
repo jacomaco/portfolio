@@ -55,7 +55,7 @@ const Hero = () => {
           Stockholm
         </p>
         <p className="hero-tagline">
-          Bygger moderna webbapplikationer med React, Node.js och MongoDB
+          Bygger moderna, säkra och skalbara webbapplikationer med användaren i fokus
         </p>
 
         <div className="hero-cta-group">

@@ -61,13 +61,13 @@ Med min bakgrund som både lärare och egenföretagare kombinerar jag teknisk pr
 - **TypeScript**, **JavaScript (ES6+)**, **Java**, **Python**, **C**, **GO**.
 
 ### Frontend
-- **React 19**, **HTML/CSS**, **Tailwind CSS**, **UI/UX-design**, **SPA-arkitektur**, **React Router**.
+- **React 19**, **React Query (TanStack Query)**, **HTML/CSS**, **Tailwind CSS**, **UI/UX-design**, **SPA-arkitektur**, **React Router**.
 
 ### Backend & API
 - **Node.js**, **Express**, **REST API:er**, **MVC-mönster**.
 
 ### Databas & Moln
-- **MongoDB Atlas**, **Mongoose ODM**, **Google Cloud Storage (GCS)**.
+- **SQL**, **MongoDB Atlas**, **Mongoose ODM**, **Google Cloud Storage (GCS)**.
 
 ### Säkerhet & Auth
 - **JWT**, **Bcrypt**, **XSS-mitigering (HttpOnly)**, **Rate Limiting**, **Helmet**.
